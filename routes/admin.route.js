@@ -1,7 +1,8 @@
 const express = require("express");
-const { setCookies } = require("../controller/admin.controller");
+const { setCookie, checkCookie } = require("../controller/admin.controller");
 const router = express.Router();
 
-router.post("/set-cookie", setCookies);
+router.post("/set-cookie", setCookie);
+router.get("/cookie-exist", checkCookie);
 
 module.exports = router;
